@@ -17,6 +17,7 @@ def test_format():
 #test range of numbers in ip
 def test_range():
     assert validate(r"255.255.255.255") == True
+    assert validate(r"1000.255.255.255") == False
     assert validate(r"255.1000.255.255") == False
     assert validate(r"255.255.1000.255") == False
     assert validate(r"255.255.255.1000") == False
